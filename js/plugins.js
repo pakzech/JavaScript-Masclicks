@@ -2,14 +2,6 @@
 var $page = $('body'),
 	$window = $(window);
 
-// Tabs
-function Tabs (setting) {
-	this.init();
-}
-Tabs.prototype.init = function __init__ () {
-
-};
-
 // Toogle
 function Toggle (settings) {
 	this.button = $(settings.button),
@@ -76,7 +68,7 @@ Tooltip.prototype.init = function __init__ () {
 };
 
 function start () {
-	var tabs = new Tabs({  });
+	var tabs = new Toggle({ button: '.tabs dt', clss: 'current', fx: 'fadeToggle', toggle: 'dd', speed: 200 });
 	var toggle = new Toggle({ button: '.toggle dt', clss: 'current', fx: 'slideToggle', toggle: 'dd', speed: 200 });
 	var tooltip = new Tooltip({
 		element: '.tooltip',
